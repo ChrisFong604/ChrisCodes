@@ -56,7 +56,9 @@ function ProjectRenderer() {
 						data-aos-duration="1100"
 					>
 						<h3>{project.name}</h3>
-						<a href={project.source}>Github</a>
+						<a href={project.source} target="_blank">
+							Github
+						</a>
 					</div>
 					<div
 						className={ProjectCSS.project_description}
