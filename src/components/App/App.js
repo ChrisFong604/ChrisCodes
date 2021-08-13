@@ -42,7 +42,6 @@ function App() {
 									position="none"
 								/>
 							</header>
-							<ProjectRenderer />
 						</div>
 					</Route>
 					<Route path="/projects">
