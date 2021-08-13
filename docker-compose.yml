@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  react-portfolio:
+    stdin_open: true
+    tty: true
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+    env_file:
+      - ./.env

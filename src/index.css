@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand&display=swap");
+
+.main-container {
+	font-family: "Montserrat", sans-serif;
+}
+
+.main-container h1 h2 h3 {
+	font-family: "Quicksand", sans-serif;
+}
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
