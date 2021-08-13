@@ -1,3 +1,7 @@
+h1 {
+	text-align: center;
+}
+
 .grid_container {
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -28,6 +32,7 @@
 .project_description p {
 	margin: 5px;
 }
+
 @media screen and (min-width: 700px) {
 	.grid_container .project_card {
 		grid-column: 1/2;

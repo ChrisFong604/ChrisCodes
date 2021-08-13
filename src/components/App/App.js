@@ -9,13 +9,14 @@ import StaticHeader from "./StaticHeader/StaticHeader";
 import ProjectRenderer from "../Projects/Projects";
 import AboutRenderer from "../About";
 import ContactRenderer from "../Contact/Contact";
+import MainHeader from "./MainHeader/MainHeader";
 
 function App() {
 	return (
 		<Router>
-			<div className="main-container">
-				<NavBarRenderer />
+			<NavBarRenderer />
 
+			<div className="main-container">
 				{/*
 					A <Switch> looks through all its children <Route>
 					elements and renders the first one whose path
@@ -27,23 +28,8 @@ function App() {
 
 				<Switch>
 					<Route exact path="/">
-						<div
-							className={"App"}
-							data-aos="fade-in"
-							data-aos-easing="linear"
-							data-aos-duration="1600"
-						>
-							<header className="App-header">
-								<h1>Chris.</h1>
-								<img
-									src={logo}
-									className="App-logo"
-									alt="logo"
-									position="none"
-								/>
-							</header>
-							<ProjectRenderer />
-						</div>
+						<MainHeader />
+						<ProjectRenderer />
 					</Route>
 					<Route path="/projects">
 						<StaticHeader Header={"Projects"} />

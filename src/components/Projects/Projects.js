@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import ProjectCSS from "./Projects.module.css";
 
 function ProjectRenderer() {
@@ -56,7 +57,7 @@ function ProjectRenderer() {
 						data-aos-duration="1100"
 					>
 						<h3>{project.name}</h3>
-						<a href={project.source} target="_blank">
+						<a href={project.source} rel="noreferrer" target="_blank">
 							Github
 						</a>
 					</div>
