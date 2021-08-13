@@ -27,9 +27,14 @@ function App() {
 
 				<Switch>
 					<Route exact path="/">
-						<div className={"App"} data-aos="fade-in" data-aos-duration="2000">
+						<div
+							className={"App"}
+							data-aos="fade-in"
+							data-aos-easing="linear"
+							data-aos-duration="1600"
+						>
 							<header className="App-header">
-								<h1>{`Hello ${process.env.REACT_APP_NAME}\nYou are awesome`}</h1>
+								<h1>Chris.</h1>
 								<img
 									src={logo}
 									className="App-logo"

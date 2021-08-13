@@ -23,7 +23,7 @@
 		rgba(88, 233, 193, 1) 51%,
 		rgba(255, 255, 255, 1) 70%
 	);
-	min-height: 100vh;
+	min-height: 120vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
