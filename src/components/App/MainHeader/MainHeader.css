@@ -7,3 +7,17 @@ button {
 	cursor: pointer;
 	outline: inherit;
 }
+
+.chev-down {
+	margin-top: 2vh;
+}
+
+.chev-down:hover {
+	color: grey;
+}
+
+.profile-pic {
+	width: 30vw;
+	margin: 10vh;
+	border-radius: 50%;
+}

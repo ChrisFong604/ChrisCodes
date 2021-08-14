@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import ProjectCSS from "./Projects.module.css";
 
 function ProjectRenderer() {

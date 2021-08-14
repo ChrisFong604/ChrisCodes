@@ -43,11 +43,9 @@
 
 .navbar li a:hover {
 	color: rgb(19, 19, 19);
-	border: 1px solid #aaa;
-	padding: 20px;
 }
 
 .navbar li.active a {
 	font-weight: bold;
-	color: #333;
+	color: rgb(70, 0, 0);
 }
