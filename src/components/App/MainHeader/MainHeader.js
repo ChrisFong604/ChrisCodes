@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import logo from "../logo.svg";
 import chevronD from "../../../resources/icons/chevron-down.svg";
 import chevronU from "../../../resources/icons/chevron-up.svg";
-import profilePic from "../../../resources/images/profilepic.png";
+import profilePic from "../../../resources/images/profilepic.jpg";
 import { useTrail, a } from "@react-spring/web";
 
 import "./MainHeader.css";

@@ -7,16 +7,16 @@ function NavBarRenderer() {
 	return (
 		<nav className={NavCSS.navbar}>
 			<ul>
-				<li data-aos="fade-in" data-aos-delay="1200" data-aos-duration="600">
+				<li>
 					<Link to="/">Home</Link>
 				</li>
-				<li data-aos="fade-in" data-aos-delay="1700" data-aos-duration="600">
+				<li>
 					<Link to="/projects">Projects</Link>
 				</li>
-				<li data-aos="fade-in" data-aos-delay="2200" data-aos-duration="600">
+				<li>
 					<Link to="/about">About</Link>
 				</li>
-				<li data-aos="fade-in" data-aos-delay="2700" data-aos-duration="600">
+				<li>
 					<Link to="/contact">Contact</Link>
 				</li>
 			</ul>

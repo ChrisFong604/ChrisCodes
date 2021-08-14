@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ProjectCSS from "./Projects.module.css";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import ProjectCSS from "./ProjectsTour.module.css";
 
-function ProjectRenderer() {
+function ProjectsTour() {
 	const projects = [
 		{
 			_id: "611369682279a12a50d0e502",
@@ -37,7 +38,7 @@ function ProjectRenderer() {
 		{
 			_id: "61160f8830280e1070f11abf",
 			name: "Personal Portfolio",
-			flavourtext: "Yup. Don't need to explain too much :)",
+			flavourtext: "My personal website built using React",
 			description:
 				"The project that you are viewing right now, Initially created as my first foray into full-stack development, it is undergoing constant design and creative changes.",
 			tools: "React, Express.js, MongoDB, Node.js",
@@ -46,8 +47,36 @@ function ProjectRenderer() {
 		},
 	];
 
+	const alignCenter = { display: "flex", alignItems: "center" };
+
 	return (
-		<div>
+		<Parallax pages={projects.length + 1}>
+			<ParallaxLayer
+				sticky={{ start: 0, end: projects.length + 0.5 }}
+				style={{ ...alignCenter, justifyContent: "flex-start" }}
+			>
+				<div className={ProjectCSS.sticky}>
+					<h3>Here are some things that I have been working on!</h3>
+				</div>
+			</ParallaxLayer>
+			{projects.map((project, index) => (
+				<ParallaxLayer
+					key={project._id}
+					offset={index + 0.5}
+					speed={0.3}
+					style={{ ...alignCenter, justifyContent: "flex-end" }}
+				>
+					<div className={ProjectCSS.project_card}>
+						<h2>{project.name}</h2>
+						<p>{project.flavourtext}</p>
+						<p>
+							<a href={project.source}>Source</a>
+						</p>
+					</div>
+				</ParallaxLayer>
+			))}
+
+			{/*
 			{projects.map((project) => (
 				<div key={project._id} className={ProjectCSS.grid_container}>
 					<div
@@ -69,8 +98,9 @@ function ProjectRenderer() {
 					</div>
 				</div>
 			))}
-		</div>
+			*/}
+		</Parallax>
 	);
 }
 
-export default ProjectRenderer;
+export default ProjectsTour;

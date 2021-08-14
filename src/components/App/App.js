@@ -5,7 +5,8 @@ import "./App.css";
 
 import NavBarRenderer from "../NavBar/NavBar";
 import StaticHeader from "./StaticHeader/StaticHeader";
-import ProjectRenderer from "../Projects/Projects";
+import ProjectsTour from "../Projects/ProjectsTour";
+import ProjectsPage from "../Projects/ProjectsPage";
 import AboutRenderer from "../About";
 import ContactRenderer from "../Contact/Contact";
 import MainHeader from "./MainHeader/MainHeader";
@@ -28,11 +29,11 @@ function App() {
 				<Switch>
 					<Route exact path="/">
 						<MainHeader />
-						<ProjectRenderer />
+						<ProjectsTour />
 					</Route>
 					<Route path="/projects">
 						<StaticHeader Header={"Projects"} />
-						<ProjectRenderer />
+						<ProjectsPage />
 					</Route>
 					<Route path="/About">
 						<StaticHeader Header={"About"} />
