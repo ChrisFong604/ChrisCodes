@@ -46,8 +46,6 @@ function ProjectsPage() {
 		},
 	];
 
-	const alignCenter = { display: "flex", alignItems: "center" };
-
 	return (
 		<div>
 			{projects.map((project) => (

@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import logo from "../logo.svg";
+
 import chevronD from "../../../resources/icons/chevron-down.svg";
 import chevronU from "../../../resources/icons/chevron-up.svg";
 import profilePic from "../../../resources/images/profilepic.jpg";
@@ -33,29 +33,31 @@ const MainHeader = () => {
 
 	return (
 		<>
-			<div className={"App"}>
+			<div>
 				<header className="App-header color">
 					<h1>Chris.</h1>
-					<img src={logo} className="App-logo" alt="logo" position="none" />
 				</header>
-				<img src={profilePic} className="profile-pic" alt="chrisfong!"></img>
-				<h1>How do people describe me?</h1>
-				<button
-					onClick={() => setHeadIncrement((headIncrement) => !headIncrement)}
-					style={{ margin: "4vh" }}
-				>
-					<img
-						src={headIncrement ? chevronU : chevronD}
-						alt="reveal-adjectives"
-					></img>
-				</button>
+				<div className="about_dropdown">
+					<img src={profilePic} className="profile-pic" alt="chrisfong!"></img>
 
-				<Trail headIncrement={headIncrement}>
-					<h2>Eager.</h2>
-					<h2>Resourceful.</h2>
-					<h2>Diligent</h2>
-					<h1>Curious</h1>
-				</Trail>
+					<h1>How do people describe me?</h1>
+					<button
+						onClick={() => setHeadIncrement((headIncrement) => !headIncrement)}
+						style={{ margin: "4vh" }}
+					>
+						<img
+							src={headIncrement ? chevronU : chevronD}
+							alt="reveal-adjectives"
+						></img>
+					</button>
+
+					<Trail headIncrement={headIncrement}>
+						<h2>Eager.</h2>
+						<h2>Resourceful.</h2>
+						<h1>Diligent</h1>
+						<h1>Curious</h1>
+					</Trail>
+				</div>
 			</div>
 		</>
 	);

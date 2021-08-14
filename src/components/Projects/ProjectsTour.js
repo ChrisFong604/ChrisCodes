@@ -50,9 +50,9 @@ function ProjectsTour() {
 	const alignCenter = { display: "flex", alignItems: "center" };
 
 	return (
-		<Parallax pages={projects.length + 1}>
+		<Parallax pages={projects.length + 2}>
 			<ParallaxLayer
-				sticky={{ start: 0, end: projects.length + 0.5 }}
+				sticky={{ start: 0, end: projects.length + 0.25 }}
 				style={{ ...alignCenter, justifyContent: "flex-start" }}
 			>
 				<div className={ProjectCSS.sticky}>
@@ -62,7 +62,7 @@ function ProjectsTour() {
 			{projects.map((project, index) => (
 				<ParallaxLayer
 					key={project._id}
-					offset={index + 0.5}
+					offset={index + 0.75}
 					speed={0.3}
 					style={{ ...alignCenter, justifyContent: "flex-end" }}
 				>

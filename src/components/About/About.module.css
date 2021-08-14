@@ -1,0 +1,21 @@
+.about_container {
+	display: grid;
+	padding: 3vh 0;
+	grid-template-columns: 2fr 3fr 3fr 2fr;
+	grid-template-rows: auto;
+}
+
+.leftcol > * {
+	margin: 20px 0;
+}
+
+.leftcol {
+	grid-column: 2/3;
+}
+.rightcol > * {
+	margin: 20px;
+}
+
+.rightcol {
+	grid-column: 3/4;
+}

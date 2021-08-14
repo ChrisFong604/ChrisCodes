@@ -1,13 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import "./App.css";
-
 import NavBarRenderer from "../NavBar/NavBar";
 import StaticHeader from "./StaticHeader/StaticHeader";
 import ProjectsTour from "../Projects/ProjectsTour";
 import ProjectsPage from "../Projects/ProjectsPage";
-import AboutRenderer from "../About";
+import AboutPage from "../About/About";
 import ContactRenderer from "../Contact/Contact";
 import MainHeader from "./MainHeader/MainHeader";
 
@@ -37,7 +35,7 @@ function App() {
 					</Route>
 					<Route path="/About">
 						<StaticHeader Header={"About"} />
-						<AboutRenderer />
+						<AboutPage />
 					</Route>
 					<Route path="/contact">
 						<StaticHeader Header={"Contact Me"} />

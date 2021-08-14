@@ -4,11 +4,7 @@ import StaticHeaderCSS from "./StaticHeader.module.css";
 
 const StaticHeader = ({ Header }) => {
 	return (
-		<header
-			className={StaticHeaderCSS.header}
-			data-aos="fade-in"
-			data-aos-duration="1200"
-		>
+		<header className={StaticHeaderCSS.header}>
 			<h1>{Header}</h1>
 		</header>
 	);
