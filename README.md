@@ -1,6 +1,6 @@
 # My Personal Portfolio
 
-StaticPortfolio is the static React client hosted at [my website](chriscodes.me). 
+StaticPortfolio is the static React client hosted at [my website](https://www.chriscodes.me). 
 ### How to run
 
 1. Clone the directory
