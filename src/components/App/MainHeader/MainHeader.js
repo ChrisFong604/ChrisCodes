@@ -35,7 +35,6 @@ const MainHeader = () => {
 
 	return (
 		<>
-			<NavBarRenderer />
 			<div>
 				<header className="App-header color">
 					<h1>Chris.</h1>
