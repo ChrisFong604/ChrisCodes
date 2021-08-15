@@ -22,8 +22,8 @@ const AboutPage = () => {
 						Outside of school, I've discovered a genuine interest in the endless
 						possibilities of tech. The concept that software has applications to
 						any and every domain of our lives is both incredible to think about,
-						but also important to acknowledge in the scope responsibilities as
-						developers.
+						but also important to acknowledge in the scope of responsibilities
+						that we bear as developers.
 					</p>
 					<p>
 						As of recent, I've endeavoured to independently seek out and explore
