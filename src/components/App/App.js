@@ -27,7 +27,8 @@ function App() {
 				<Switch>
 					<Route exact path="/">
 						<MainHeader />
-						<ProjectsTour />
+						<AboutPage />
+						<ProjectsPage />
 					</Route>
 					<Route path="/projects">
 						<StaticHeader Header={"Projects"} />

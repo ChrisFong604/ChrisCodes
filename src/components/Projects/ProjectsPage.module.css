@@ -33,6 +33,14 @@ h1 {
 	margin: 5px;
 }
 
+.parallax {
+	display: none;
+	scrollbar-width: none;
+}
+.parallax::-webkit-scrollbar {
+	display: none;
+}
+
 @media screen and (min-width: 700px) {
 	.grid_container .project_card {
 		grid-column: 1/2;

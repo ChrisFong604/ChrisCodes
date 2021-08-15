@@ -6,7 +6,11 @@ const AboutPage = () => {
 		<>
 			<div className={AboutCSS.about_container}>
 				<p style={{ gridColumn: "2/3", opacity: "0.5" }}>August 14th, 2021</p>
-				<div className={AboutCSS.leftcol}>
+				<div
+					className={AboutCSS.leftcol}
+					data-aos="fade-right"
+					data-aos-duration="1000"
+				>
 					<h3>General Introduction</h3>
 					<p>
 						Hi, nice, to meet you :). My name is Christopher, and I'm currently
@@ -40,7 +44,12 @@ const AboutPage = () => {
 						continue evolving as long as I continue to gain more things to add!
 					</p>
 				</div>
-				<div className={AboutCSS.rightcol}>
+				<div
+					className={AboutCSS.rightcol}
+					data-aos="fade-left"
+					data-aos-duration="1000"
+					data-aos-delay="1200"
+				>
 					<h3>Hobbies and Interests</h3>
 					<p>
 						What first inspired me to learn about technology was none other than
