@@ -1,6 +1,6 @@
 import React from "react";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import ProjectCSS from "./ProjectsTour.module.css";
+import { ParallaxLayer } from "@react-spring/parallax";
+import ProjectCSS from "./ProjectsPage.module.css";
 
 function ProjectsTour() {
 	const projects = [
@@ -47,62 +47,30 @@ function ProjectsTour() {
 		},
 	];
 
-	const alignCenter = { display: "flex", alignItems: "center" };
-
 	return (
-		<Parallax
-			pages={projects.length + 2}
-			innerStyle={{ scrollbarWidth: "0px" }}
-		>
-			<ParallaxLayer
-				sticky={{ start: 0, end: projects.length + 0.25 }}
-				style={{ ...alignCenter, justifyContent: "flex-start" }}
-			>
-				<div className={ProjectCSS.sticky}>
-					<h3>Here are some things that I have been working on!</h3>
+		<div>
+			<ParallaxLayer sticky={{ start: 2.5, end: 10 }} speed={0.5}>
+				<div>
+					<p>Here are some things that I've been working on!</p>
 				</div>
 			</ParallaxLayer>
 			{projects.map((project, index) => (
-				<ParallaxLayer
-					key={project._id}
-					offset={index + 0.5}
-					speed={1.2}
-					style={{ ...alignCenter, justifyContent: "flex-end" }}
-				>
-					<div className={ProjectCSS.project_card}>
-						<h2>{project.name}</h2>
-						<p>{project.flavourtext}</p>
-						<p>
-							<a href={project.source}>Source</a>
-						</p>
+				<ParallaxLayer key={project._id} offset={index + 3} speed={0.3}>
+					<div key={project._id} className={ProjectCSS.grid_container}>
+						<div className={ProjectCSS.project_card}>
+							<h3>{project.name}</h3>
+							<a href={project.source} rel="noreferrer" target="_blank">
+								Github
+							</a>
+						</div>
+						<div className={ProjectCSS.project_description}>
+							<p>{project.flavourtext}</p>
+							<p>{index + 3}</p>
+						</div>
 					</div>
 				</ParallaxLayer>
 			))}
-
-			{/*
-			{projects.map((project) => (
-				<div key={project._id} className={ProjectCSS.grid_container}>
-					<div
-						className={ProjectCSS.project_card}
-						data-aos="fade-right"
-						data-aos-duration="1100"
-					>
-						<h3>{project.name}</h3>
-						<a href={project.source} rel="noreferrer" target="_blank">
-							Github
-						</a>
-					</div>
-					<div
-						className={ProjectCSS.project_description}
-						data-aos="fade-in"
-						data-aos-delay="800"
-					>
-						<p>{project.flavourtext}</p>
-					</div>
-				</div>
-			))}
-			*/}
-		</Parallax>
+		</div>
 	);
 }
 

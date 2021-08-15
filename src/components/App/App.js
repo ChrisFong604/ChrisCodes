@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import NavBarRenderer from "../NavBar/NavBar";
 import StaticHeader from "./StaticHeader/StaticHeader";
@@ -12,10 +13,8 @@ import MainHeader from "./MainHeader/MainHeader";
 function App() {
 	return (
 		<Router>
-			<NavBarRenderer />
-
-			<div className="main-container">
-				{/*
+			<></>
+			{/*
 					A <Switch> looks through all its children <Route>
 					elements and renders the first one whose path
 					matches the current URL. Use a <Switch> any time
@@ -23,27 +22,28 @@ function App() {
 					of them to render at a time
 					Switch is invisible on the page
 				*/}
-
-				<Switch>
-					<Route exact path="/">
-						<MainHeader />
-						<AboutPage />
-						<ProjectsPage />
-					</Route>
-					<Route path="/projects">
-						<StaticHeader Header={"Projects"} />
-						<ProjectsPage />
-					</Route>
-					<Route path="/About">
-						<StaticHeader Header={"About"} />
-						<AboutPage />
-					</Route>
-					<Route path="/contact">
-						<StaticHeader Header={"Contact Me"} />
-						<ContactRenderer />
-					</Route>
-				</Switch>
-			</div>
+			<Switch>
+				<Route exact path="/">
+					<Parallax>
+						<ParallaxLayer offset={0.08} speed={1}>
+							<MainHeader />
+						</ParallaxLayer>
+						<ParallaxLayer offset={1.5} speed={0.6}>
+							<AboutPage />
+						</ParallaxLayer>
+						<ProjectsTour />
+					</Parallax>
+				</Route>
+				<Route path="/projects">
+					<ProjectsPage />
+				</Route>
+				<Route path="/About">
+					<AboutPage />
+				</Route>
+				<Route path="/contact">
+					<ContactRenderer />
+				</Route>
+			</Switch>
 		</Router>
 	);
 }

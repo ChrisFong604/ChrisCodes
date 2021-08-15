@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from "react";
 
+import NavBarRenderer from "../../NavBar/NavBar";
+
 import chevronD from "../../../resources/icons/chevron-down.svg";
 import chevronU from "../../../resources/icons/chevron-up.svg";
 import profilePic from "../../../resources/images/profilepic.jpg";
@@ -33,6 +35,7 @@ const MainHeader = () => {
 
 	return (
 		<>
+			<NavBarRenderer />
 			<div>
 				<header className="App-header color">
 					<h1>Chris.</h1>
@@ -54,7 +57,7 @@ const MainHeader = () => {
 					<Trail headIncrement={headIncrement}>
 						<h2>Eager.</h2>
 						<h2>Resourceful.</h2>
-						<h1>Diligent</h1>
+						<h2>Diligent</h2>
 						<h1>Curious</h1>
 					</Trail>
 				</div>
