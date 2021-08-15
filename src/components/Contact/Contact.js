@@ -9,10 +9,7 @@ export default function ContactRenderer() {
 	return (
 		<div className={ContactCSS.container}>
 			<div className={ContactCSS.leftcol}>
-				<p>
-					Feel free to follow/connect with me on any of my social platforms, or
-					just reach out to my email @chris_fong@sfu.ca
-				</p>
+				<p>Connect with me:</p>
 			</div>
 			<div className={ContactCSS.rightcol}>
 				<ul>
