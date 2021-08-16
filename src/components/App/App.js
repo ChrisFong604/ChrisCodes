@@ -1,50 +1,69 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-import NavBarRenderer from "../NavBar/NavBar";
-import StaticHeader from "./StaticHeader/StaticHeader";
-import ProjectsTour from "../Projects/ProjectsTour";
-import ProjectsPage from "../Projects/ProjectsPage";
+import ProjectsJSON from "./projects.json";
 import AboutPage from "../About/About";
-import ContactRenderer from "../Contact/Contact";
+import NavBar from "../NavBar/NavBar";
 import MainHeader from "./MainHeader/MainHeader";
 
+import ProjectCSS from "../Projects/ProjectsTour.module.css";
+
 function App() {
+	const ref = useRef(null);
+	const [projects, setProjects] = useState([]);
+	const numProjects = ProjectsJSON.length;
+	useEffect(() => {
+		setProjects(ProjectsJSON);
+	}, []);
+	const projectLayer = { display: "flex", alignItems: "center" };
 	return (
-		<Router>
-			<NavBarRenderer />
+		<Parallax ref={ref} pages={5 + numProjects} className="main-container">
+			<ParallaxLayer offset={0} speed={1}>
+				<MainHeader />
+			</ParallaxLayer>
+			<ParallaxLayer
+				sticky={{ start: 0, end: 10 }}
+				style={{ display: "flex", alignItems: "center", zIndex: "0" }}
+			>
+				<NavBar parallax={ref} />
+			</ParallaxLayer>
 
-			<div className="main-container">
-				{/*
-					A <Switch> looks through all its children <Route>
-					elements and renders the first one whose path
-					matches the current URL. Use a <Switch> any time
-					you have multiple routes, but you want only one
-					of them to render at a time
-					Switch is invisible on the page
-				*/}
-
-				<Switch>
-					<Route exact path="/">
-						<MainHeader />
-						<AboutPage />
-						<ProjectsPage />
-					</Route>
-					<Route path="/projects">
-						<StaticHeader Header={"Projects"} />
-						<ProjectsPage />
-					</Route>
-					<Route path="/About">
-						<StaticHeader Header={"About"} />
-						<AboutPage />
-					</Route>
-					<Route path="/contact">
-						<StaticHeader Header={"Contact Me"} />
-						<ContactRenderer />
-					</Route>
-				</Switch>
+			<ParallaxLayer offset={1.5} speed={1}>
+				<AboutPage />
+			</ParallaxLayer>
+			<ParallaxLayer
+				sticky={{ start: 2.5, end: 3 + numProjects }}
+				style={{
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "left",
+					zIndex: "0",
+					pointerEvents: "none",
+				}}
+			>
+				<div style={{ marginLeft: "15%", width: "30%" }}>
+					<p>Here are some things I am involved in</p>
+				</div>
+			</ParallaxLayer>
+			<div className="projects-container">
+				{projects.map((project, index) => (
+					<ParallaxLayer
+						key={project._id}
+						offset={index + 3}
+						speed={1.2}
+						style={{ ...projectLayer, justifyContent: "flex-end" }}
+					>
+						<div key={project._id} className={ProjectCSS.project_card}>
+							<h3>{project.name}</h3>
+							<a href={project.source} rel="noreferrer" target="_blank">
+								Source
+							</a>
+							<p className={ProjectCSS.project_desc}>{project.flavourtext}</p>
+						</div>
+					</ParallaxLayer>
+				))}
 			</div>
-		</Router>
+		</Parallax>
 	);
 }
 

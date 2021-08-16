@@ -2,42 +2,23 @@ h1 {
 	text-align: center;
 }
 
-.grid_container {
-	margin-top: 50px;
-	margin-bottom: 50px;
-	width: 100%;
-	padding-left: 8vw;
-	padding-right: 8vw;
-	display: grid;
-	grid-template-columns: 4fr 7fr;
-	grid-template-rows: repeat(auto-fill, 40vh);
-}
 .project_card {
-	display: grid;
-	font-size: 1.25rem;
+	grid-column: 2/3;
+	margin-right: 20vw;
+	text-align: left;
 	width: 25vw;
-	height: 30vw;
-	padding: 10px;
-	text-align: center;
-	border: solid black 2px;
-	border-radius: 15px;
-	margin-right: 15%;
+	height: 15vw;
 }
 .project_card a {
 	text-decoration: none;
 }
 
-.sticky {
-	margin-left: 10%;
-	max-width: 25vw;
+.project_desc {
+	text-align: right;
+	padding: 3vw;
+	border: 2px solid grey;
 }
 
-@media screen and (min-width: 700px) {
-	.grid_container .project_card {
-		grid-column: 1/2;
-	}
-
-	.grid_container .project_description {
-		grid-column: 2/3;
-	}
+.sticky {
+	margin-left: 15%;
 }

@@ -52,9 +52,9 @@ const MainHeader = () => {
 					</button>
 
 					<Trail headIncrement={headIncrement}>
-						<h2>Eager.</h2>
-						<h2>Resourceful.</h2>
-						<h1>Diligent</h1>
+						<p>Eager.</p>
+						<h3>Resourceful.</h3>
+						<h2>Diligent</h2>
 						<h1>Curious</h1>
 					</Trail>
 				</div>

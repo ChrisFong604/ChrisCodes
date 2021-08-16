@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+
+import StaticHeader from "../App/StaticHeader/StaticHeader";
+
 import ProjectCSS from "./ProjectsPage.module.css";
 
 function ProjectsPage() {
@@ -48,6 +51,7 @@ function ProjectsPage() {
 
 	return (
 		<div>
+			<StaticHeader Header={"Projects"} />
 			{projects.map((project) => (
 				<div key={project._id} className={ProjectCSS.grid_container}>
 					<div
