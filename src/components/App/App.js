@@ -4,11 +4,11 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ProjectsJSON from "./projects.json";
 import ProjectsTour from "../Projects/ProjectsTour";
 import AboutPage from "../About/About";
-import ContactRenderer from "../Contact/Contact";
+import NavBar from "../NavBar/NavBar";
+import ContactPage from "../Contact/Contact";
 import MainHeader from "./MainHeader/MainHeader";
 
 function App() {
-	const [totalPages, setTotalPages] = useState(2.5);
 	const [projects, setProjects] = useState([]);
 
 	useEffect(() => {
@@ -21,15 +21,18 @@ function App() {
 				<MainHeader />
 			</ParallaxLayer>
 			<ParallaxLayer sticky={{ start: 1, end: 10 }}>
-				<h3>SideNav here</h3>
+				<NavBar />
 			</ParallaxLayer>
 
 			<ParallaxLayer offset={1.5} speed={0.6}>
 				<AboutPage />
 			</ParallaxLayer>
-			<ParallaxLayer sticky={{ start: 3, end: 10 }}>
-				<div>
-					<p>Here are some things that I've been working on!</p>
+			<ParallaxLayer
+				sticky={{ start: 3, end: 6.5 }}
+				style={{ display: "flex", alignItems: "center" }}
+			>
+				<div style={{ marginLeft: "12%" }}>
+					<h3>Here are some projects that I am involved in</h3>
 				</div>
 			</ParallaxLayer>
 			<ProjectsTour projects={projects} />

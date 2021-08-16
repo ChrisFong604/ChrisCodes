@@ -1,0 +1,14 @@
+.nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: auto;
+}
+
+.nav-list {
+	list-style-type: none;
+}
+
+.nav-list > * {
+	padding-bottom: 5vh;
+}

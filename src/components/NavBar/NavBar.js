@@ -1,27 +1,62 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import NavCSS from "./NavBar.module.css";
+import "./NavBar.css";
 
-function NavBarRenderer() {
+import { ParallaxLayer } from "@react-spring/parallax";
+
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
+
+import { KeyboardArrowUp } from "@material-ui/icons";
+
+import ChevronUp from "../../resources/icons/chevron-up.svg";
+function NavBar() {
 	return (
-		<nav className={NavCSS.navbar}>
-			<ul>
+		<div className="nav-container">
+			<ul className="nav-list">
 				<li>
-					<Link to="/">Home</Link>
+					<KeyboardArrowUp fontSize="large" />
+				</li>
+				<li>About</li>
+				<li>Projects</li>
+				<li>Contact Me</li>
+				<li>
+					<a
+						href="https://github.com/chrisfong604"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<GitHubIcon />
+					</a>
 				</li>
 				<li>
-					<Link to="/projects">Projects</Link>
+					<a
+						href="https://www.linkedin.com/in/chrisfong604/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<LinkedInIcon />
+					</a>
 				</li>
 				<li>
-					<Link to="/about">About</Link>
+					<a
+						href="https://instagram.com/isrly_chris"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<InstagramIcon />
+					</a>
 				</li>
 				<li>
-					<Link to="/contact">Contact</Link>
+					<a href="mailto: ccffoonngg@gmail.com">
+						<ContactMailIcon />
+					</a>
 				</li>
 			</ul>
-		</nav>
+		</div>
 	);
 }
 
-export default NavBarRenderer;
+export default NavBar;
