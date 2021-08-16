@@ -2,8 +2,6 @@ import React from "react";
 
 import "./NavBar.css";
 
-import { ParallaxLayer } from "@react-spring/parallax";
-
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -11,17 +9,21 @@ import ContactMailIcon from "@material-ui/icons/ContactMail";
 
 import { KeyboardArrowUp } from "@material-ui/icons";
 
-import ChevronUp from "../../resources/icons/chevron-up.svg";
-function NavBar() {
+function NavBar({ parallax }) {
 	return (
 		<div className="nav-container">
 			<ul className="nav-list">
 				<li>
-					<KeyboardArrowUp fontSize="large" />
+					<button onClick={() => parallax.current.scrollTo(0)}>
+						<KeyboardArrowUp fontSize="large" />
+					</button>
 				</li>
-				<li>About</li>
-				<li>Projects</li>
-				<li>Contact Me</li>
+				<li>
+					<button onClick={() => parallax.current.scrollTo(1.25)}>About</button>
+				</li>
+				<li>
+					<button onClick={() => parallax.current.scrollTo(3)}>Projects</button>
+				</li>
 				<li>
 					<a
 						href="https://github.com/chrisfong604"

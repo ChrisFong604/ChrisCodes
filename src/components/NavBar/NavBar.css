@@ -1,14 +1,22 @@
 .nav-container {
+	width: 15%;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	margin: auto;
+	margin-left: 0;
+	padding-right: 5vw;
 }
 
 .nav-list {
 	list-style-type: none;
+	color: black;
 }
 
 .nav-list > * {
 	padding-bottom: 5vh;
+}
+
+li a,
+li a:visited {
+	color: black;
 }
