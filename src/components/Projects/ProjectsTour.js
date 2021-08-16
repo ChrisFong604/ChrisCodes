@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { ParallaxLayer } from "@react-spring/parallax";
 import ProjectCSS from "./ProjectsTour.module.css";
 
 function ProjectsTour({ projects }) {
-	const [parallaxScroll, setParallaxScroll] = useState(true);
-
 	const projectLayer = { display: "flex", alignItems: "center" };
 	return (
 		<div className="projects-container">
