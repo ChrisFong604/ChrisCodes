@@ -1,27 +1,64 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import NavCSS from "./NavBar.module.css";
+import "./NavBar.css";
 
-function NavBarRenderer() {
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import ContactMailIcon from "@material-ui/icons/ContactMail";
+
+import { KeyboardArrowUp } from "@material-ui/icons";
+
+function NavBar({ parallax }) {
 	return (
-		<nav className={NavCSS.navbar}>
-			<ul>
+		<div className="nav-container">
+			<ul className="nav-list">
 				<li>
-					<Link to="/">Home</Link>
+					<button onClick={() => parallax.current.scrollTo(0)}>
+						<KeyboardArrowUp fontSize="large" />
+					</button>
 				</li>
 				<li>
-					<Link to="/projects">Projects</Link>
+					<button onClick={() => parallax.current.scrollTo(1.25)}>About</button>
 				</li>
 				<li>
-					<Link to="/about">About</Link>
+					<button onClick={() => parallax.current.scrollTo(3)}>Projects</button>
 				</li>
 				<li>
-					<Link to="/contact">Contact</Link>
+					<a
+						href="https://github.com/chrisfong604"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<GitHubIcon />
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://www.linkedin.com/in/chrisfong604/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<LinkedInIcon />
+					</a>
+				</li>
+				<li>
+					<a
+						href="https://instagram.com/isrly_chris"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<InstagramIcon />
+					</a>
+				</li>
+				<li>
+					<a href="mailto: ccffoonngg@gmail.com">
+						<ContactMailIcon />
+					</a>
 				</li>
 			</ul>
-		</nav>
+		</div>
 	);
 }
 
-export default NavBarRenderer;
+export default NavBar;
