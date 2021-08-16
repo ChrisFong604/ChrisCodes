@@ -19,7 +19,7 @@ function NavBar({ parallax }) {
 					</button>
 				</li>
 				<li>
-					<button onClick={() => parallax.current.scrollTo(1.25)}>About</button>
+					<button onClick={() => parallax.current.scrollTo(1.22)}>About</button>
 				</li>
 				<li>
 					<button onClick={() => parallax.current.scrollTo(3)}>Projects</button>
