@@ -31,7 +31,7 @@ function App() {
         <MainHeader />
       </ParallaxLayer>
       <ParallaxLayer
-        sticky={{ start: 0, end: 10 }}
+        sticky={{ start: 0, end: 6 + dynamicPages }}
         style={{ display: "flex", alignItems: "center", zIndex: "0" }}
       >
         <NavBar parallax={ref} />
@@ -100,6 +100,16 @@ function App() {
           </ParallaxLayer>
         ))}
       </div>
+
+      <ParallaxLayer
+        offset={5 + dynamicPages}
+        speed={1}
+        style={{ ...projectLayer, justifyContent: "center" }}
+      >
+        <div>
+          <h3>Handcrafted by Christopher Fong © 2021. All Rights Reserved</h3>
+        </div>
+      </ParallaxLayer>
     </Parallax>
   );
 }

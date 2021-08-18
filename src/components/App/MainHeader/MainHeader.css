@@ -1,56 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 
 .color {
-	width: 100%;
-	background: rgb(41, 57, 201);
-	background: linear-gradient(
-		165deg,
-		rgba(41, 57, 201, 1) 0%,
-		rgba(36, 185, 199, 1) 36%,
-		rgba(88, 233, 193, 1) 59%,
-		rgba(255, 255, 255, 1) 80%
-	);
+  display: grid;
+  place-items: center;
+  z-index: 0;
+  width: 60%;
+  margin: auto;
+  height: 110vh;
 }
 .App-header {
-	min-height: 105vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 30vh;
-	font-size: calc(30px + 2vmin);
-	font-weight: lighter;
-	font-family: "DM sans", sans-serif;
-	color: white;
+  font-size: calc(30px + 2vmin);
+  font-weight: lighter;
+  font-family: "DM sans", sans-serif;
+  color: white;
+
+  background: rgb(77, 0, 255);
+  background: radial-gradient(
+    circle,
+    rgba(77, 0, 255, 1) 0%,
+    rgba(18, 151, 255, 1) 21%,
+    rgba(0, 244, 216, 1) 46%,
+    whitesmoke 65%
+  );
 }
 
 .about_dropdown {
-	text-align: center;
+  text-align: center;
 }
 
 .App-link {
-	color: #61dafb;
+  color: #61dafb;
 }
 
 button {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .chev-down {
-	margin-top: 2vh;
+  margin-top: 2vh;
 }
 
 .chev-down:hover {
-	color: grey;
+  color: grey;
 }
 
 .profile-pic {
-	width: 26vw;
-	margin: 10vh;
-	border-radius: 50%;
+  width: 26vw;
+  margin: 10vh;
+  border-radius: 50%;
 }
