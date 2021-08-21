@@ -59,22 +59,6 @@ function App() {
 			>
 				<div style={{ marginLeft: "15%", width: "30%" }}>
 					<p>Here are some places I've been</p>
-					{expandInformation ? (
-						""
-					) : (
-						<div>
-							<ul style={{ listStyleType: "none" }}>
-								{experiences.map((experience) => (
-									<li>
-										<a href={experience.source}>
-											<GitHubIcon />
-											<p>{experience.organization}</p>
-										</a>{" "}
-									</li>
-								))}
-							</ul>
-						</div>
-					)}
 				</div>
 			</ParallaxLayer>
 			<div>
@@ -108,21 +92,18 @@ function App() {
 				}}
 			>
 				<div style={{ marginLeft: "15%", width: "30%" }}>
-					<p>And some things I am working on!</p>
-					{expandInformation ? (
-						<div>
-							<ul style={{ listStyleType: "none" }}>
-								{projects.map((project) => (
-									<li>
-										<a href={project.source}>
-											<GitHubIcon />
-											<p>{project.name}</p>
-										</a>{" "}
-									</li>
-								))}
-							</ul>
-						</div>
-					) : null}
+					<span>
+						<p>
+							And some things I am working on! All projects are visible on my
+							Github &#128516;
+						</p>
+					</span>
+					<br></br>
+					<span>
+						<p style={{ opacity: "70%" }}>
+							All projects are visible on my Github!
+						</p>
+					</span>
 				</div>
 			</ParallaxLayer>
 

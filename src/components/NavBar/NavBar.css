@@ -1,10 +1,8 @@
 .nav-container {
-	width: 15%;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	margin-left: 0;
-	padding-right: 5vw;
+	display: grid;
+	place-items: center;
+	width: 10vw;
+	padding: auto;
 }
 
 .nav-list {
@@ -12,11 +10,22 @@
 	color: black;
 }
 
-.nav-list > * {
-	padding-bottom: 5vh;
-}
-
 li a,
 li a:visited {
 	color: black;
+	transition: all 0.6s ease-in-out;
+}
+
+li a:hover {
+	opacity: 70%;
+}
+
+.nav-list > * {
+	padding-bottom: 5vh;
+	transition: all 0.75s ease-in-out;
+}
+
+.nav-list > *:hover {
+	transform: scale(1.25);
+	color: rgb(0, 177, 168);
 }

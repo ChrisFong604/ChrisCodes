@@ -19,8 +19,8 @@ const AboutPage = () => {
 					</p>
 					<h3>What do I love about tech?</h3>
 					<p>
-						Outside of school, I've discovered a genuine interest in the endless
-						possibilities of tech. The concept that software has applications to
+						I've discovered a genuine interest in the limitless applications of
+						technology. The concept that software has applications to just about
 						any and every domain of our lives is both incredible to think about,
 						but also important to acknowledge in the scope of responsibilities
 						that we bear as developers.
@@ -37,28 +37,33 @@ const AboutPage = () => {
 							implementing
 						</li>
 					</p>
-					<h3>The future, for now</h3>
-					<p>
-						This website will contain not only a record of what I've
-						accomplished, but also my plans and goals for the future. It will
-						continue evolving as long as I continue to gain more things to add!
-					</p>
 				</div>
 				<div className={AboutCSS.rightcol}>
-					<h3>Hobbies and Interests</h3>
+					<h3>Goal for this website</h3>
 					<p>
-						What first inspired me to learn about technology was none other than
-						my experiences with it. Some of my best memories are from the awe I
-						felt playing Halo, or the fun competitions in Mario Kart amongst my
-						friends. These experiences led me to begin tinkering with computers,
-						and putting together machines.
+						This website will contain not only a record of what I've
+						accomplished, but also my plans and goals for the future. I hope
+						that as time passes, my story will be interesting and inspiring to
+						the wanderers of the web that stumble upon my little domain.
+					</p>
+					<h3>Some stuff about me</h3>
+					<h4>How did I get into tech?</h4>
+					<p>
+						Growing up, some of my best memories were from the sci-fi adventures
+						I had in Halo: Combat Evolved, or the fun I had with friends playing
+						Wii sports and Mario Party.
 					</p>
 					<p>
-						I enjoy a variety of sports, but my all-time favourites are
-						snowboarding and basketball. My favourite players include Derrick
-						Rose, Devin Booker, and Stephen Curry; players who are not only
-						incredibly talented, but also whose personalities and work ethic
-						inspire me.
+						Inevitably, I became curious about the various machines that
+						provided me with such fond memories and fun times. I fondly recall
+						researching endlessly the various components of computers and what
+						purpose they served, becoming fascinated with the incredible things
+						that could be built, and the things these machines were capable of,
+						far beyond video games.
+					</p>
+					<p>
+						Thus, my curiosity led me to pursue a degree in CS, which is where I
+						am at in the present.
 					</p>
 				</div>
 			</div>
