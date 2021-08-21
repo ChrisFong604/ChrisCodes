@@ -16,16 +16,16 @@ li a:visited {
 	transition: all 0.6s ease-in-out;
 }
 
-li a:hover {
-	opacity: 70%;
-}
-
 .nav-list > * {
 	padding-bottom: 5vh;
 	transition: all 0.75s ease-in-out;
 }
 
 .nav-list > *:hover {
-	transform: scale(1.25);
+	transform: scale(1.15);
 	color: rgb(0, 177, 168);
+}
+
+.nav-list a:hover {
+	opacity: 80%;
 }
