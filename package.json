@@ -1,6 +1,6 @@
 {
   "homepage": "http://ChrisFong604.github.io/StaticPortfolio",
-  "name": "Christopher Fong's Portfolio",
+  "name": "staticportfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
