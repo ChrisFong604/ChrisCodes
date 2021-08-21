@@ -1,5 +1,6 @@
 {
-  "name": "client",
+  "homepage": "http://ChrisFong604.github.io/StaticPortfolio",
+  "name": "Christopher Fong's Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "react-test-renderer": "^17.0.2"
   }
 }
