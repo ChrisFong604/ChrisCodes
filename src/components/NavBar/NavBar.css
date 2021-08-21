@@ -27,5 +27,5 @@ li a:visited {
 }
 
 .nav-list a:hover {
-	opacity: 80%;
+	color: rgb(0, 177, 168);
 }
