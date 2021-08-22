@@ -1,6 +1,5 @@
 {
-  "homepage": "http://ChrisFong604.github.io/StaticPortfolio",
-  "name": "Christopher Fong's Portfolio",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,8 +19,6 @@
     "serve": "^12.0.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "serve -s build",
     "dev": "react-scripts start",
     "build": "react-scripts build",
@@ -48,7 +45,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
     "react-test-renderer": "^17.0.2"
   }
 }
