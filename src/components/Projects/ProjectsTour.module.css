@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+}
+
+.project_card {
+  grid-column: 2/3;
+  margin-right: 20vw;
+  text-align: left;
+  width: 25vw;
+  height: 15vw;
+}
+.project_card a {
+  text-decoration: none;
+}
+
+.project_desc {
+  text-align: right;
+  padding: 1vw 0;
+}
+
+.sticky {
+  margin-left: 15%;
+}

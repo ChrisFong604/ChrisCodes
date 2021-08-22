@@ -1,0 +1,31 @@
+.nav-container {
+	display: grid;
+	place-items: center;
+	width: 10vw;
+	padding: auto;
+}
+
+.nav-list {
+	list-style-type: none;
+	color: black;
+}
+
+li a,
+li a:visited {
+	color: black;
+	transition: all 0.6s ease-in-out;
+}
+
+.nav-list > * {
+	padding-bottom: 5vh;
+	transition: all 0.75s ease-in-out;
+}
+
+.nav-list > *:hover {
+	transform: scale(1.15);
+	color: rgb(0, 177, 168);
+}
+
+.nav-list a:hover {
+	color: rgb(0, 177, 168);
+}

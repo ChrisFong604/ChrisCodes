@@ -1,0 +1,20 @@
+.experience-card {
+	grid-column: 2/3;
+	margin-right: 15vw;
+	text-align: left;
+	width: 25vw;
+	height: 15vw;
+}
+.experience-card a {
+	text-decoration: none;
+}
+.experience-card h3 {
+	color: rgb(0, 144, 144);
+}
+.experience-desc {
+	text-align: right;
+	padding: 0.5vw 0;
+}
+.sticky {
+	margin-left: 15%;
+}
