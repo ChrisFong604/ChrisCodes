@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/StaticPortfolio/static/css/main.f369abac.chunk.css",
+    "main.js": "/StaticPortfolio/static/js/main.11cb84da.chunk.js",
+    "main.js.map": "/StaticPortfolio/static/js/main.11cb84da.chunk.js.map",
+    "runtime-main.js": "/StaticPortfolio/static/js/runtime-main.04524be7.js",
+    "runtime-main.js.map": "/StaticPortfolio/static/js/runtime-main.04524be7.js.map",
+    "static/js/2.ab5741f9.chunk.js": "/StaticPortfolio/static/js/2.ab5741f9.chunk.js",
+    "static/js/2.ab5741f9.chunk.js.map": "/StaticPortfolio/static/js/2.ab5741f9.chunk.js.map",
+    "index.html": "/StaticPortfolio/index.html",
+    "static/css/main.f369abac.chunk.css.map": "/StaticPortfolio/static/css/main.f369abac.chunk.css.map",
+    "static/js/2.ab5741f9.chunk.js.LICENSE.txt": "/StaticPortfolio/static/js/2.ab5741f9.chunk.js.LICENSE.txt",
+    "static/media/chevron-down.21ab3693.svg": "/StaticPortfolio/static/media/chevron-down.21ab3693.svg",
+    "static/media/chevron-up.30700e1a.svg": "/StaticPortfolio/static/media/chevron-up.30700e1a.svg",
+    "static/media/profilepic.9403868a.jpg": "/StaticPortfolio/static/media/profilepic.9403868a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04524be7.js",
+    "static/js/2.ab5741f9.chunk.js",
+    "static/css/main.f369abac.chunk.css",
+    "static/js/main.11cb84da.chunk.js"
+  ]
+}
