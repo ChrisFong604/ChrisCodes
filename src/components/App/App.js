@@ -8,7 +8,6 @@ import AboutPage from "../About/About";
 import NavBar from "../NavBar/NavBar";
 import MainHeader from "./MainHeader/MainHeader";
 
-import GitHubIcon from "@material-ui/icons/GitHub";
 import ProjectCSS from "../Projects/ProjectsTour.module.css";
 import "../Experiences/Experiences.css";
 

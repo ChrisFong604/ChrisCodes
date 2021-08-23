@@ -1,7 +1,5 @@
 import React, { Fragment, useState } from "react";
 
-import chevronD from "../../../resources/icons/chevron-down.svg";
-import chevronU from "../../../resources/icons/chevron-up.svg";
 import profilePic from "../../../resources/images/profilepic.jpg";
 import { useTrail, a } from "@react-spring/web";
 
@@ -29,7 +27,6 @@ function Trail({ headIncrement, children }) {
 }
 
 const MainHeader = () => {
-  const [headIncrement, setHeadIncrement] = useState(false);
 
   return (
     <>
