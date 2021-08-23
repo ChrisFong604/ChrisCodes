@@ -1,7 +1,7 @@
 import React from "react";
 
 import profilePic from "../../../resources/images/profilepic.jpg";
-import { useTrail, a } from "@react-spring/web";
+//import { useTrail, a } from "@react-spring/web";
 
 import "./MainHeader.css";
 
