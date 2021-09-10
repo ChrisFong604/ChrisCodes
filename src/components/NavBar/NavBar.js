@@ -24,7 +24,7 @@ function NavBar({ parallax, expandInformation, expandCallback }) {
 					<button onClick={() => parallax.current.scrollTo(1.22)}>About</button>
 				</li>
 				<li>
-					<button onClick={() => parallax.current.scrollTo(2.97)}>
+					<button onClick={() => parallax.current.scrollTo(2.92)}>
 						Experiences
 					</button>
 				</li>
