@@ -1,12 +1,11 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
 
-import chevronD from "../../../resources/icons/chevron-down.svg";
-import chevronU from "../../../resources/icons/chevron-up.svg";
 import profilePic from "../../../resources/images/profilepic.jpg";
-import { useTrail, a } from "@react-spring/web";
+//import { useTrail, a } from "@react-spring/web";
 
 import "./MainHeader.css";
 
+/*
 function Trail({ headIncrement, children }) {
   const items = React.Children.toArray(children);
   const trail = useTrail(items.length, {
@@ -27,9 +26,9 @@ function Trail({ headIncrement, children }) {
     </div>
   );
 }
+*/
 
 const MainHeader = () => {
-  const [headIncrement, setHeadIncrement] = useState(false);
 
   return (
     <>
