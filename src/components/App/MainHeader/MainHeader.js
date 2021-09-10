@@ -29,18 +29,17 @@ function Trail({ headIncrement, children }) {
 */
 
 const MainHeader = () => {
+	return (
+		<>
+			<div>
+				<header className="App-header color">
+					<h1>Chris.</h1>
+				</header>
 
-  return (
-    <>
-      <div>
-        <header className="App-header color">
-          <h1>Chris.</h1>
-        </header>
+				<div className="about_dropdown">
+					<img src={profilePic} className="profile-pic" alt="chrisfong!"></img>
 
-        <div className="about_dropdown">
-          <img src={profilePic} className="profile-pic" alt="chrisfong!"></img>
-
-          {/*
+					{/*
           <button
             onClick={() => setHeadIncrement((headIncrement) => !headIncrement)}
             style={{ margin: "4vh" }}
@@ -58,15 +57,26 @@ const MainHeader = () => {
             <h1>Curious</h1>
           </Trail>
 		  */}
-          <h1 style={{ paddingBottom: "10vh" }}>How do people describe me?</h1>
-          <p>Resourceful.</p>
-          <h3>Eager.</h3>
-          <h2>Diligent.</h2>
-          <h1>Curious.</h1>
-        </div>
-      </div>
-    </>
-  );
+					<div className="intro-text">
+						<h1 style={{ paddingBottom: "10vh" }}>A Brief Introduction</h1>
+						<p>
+							Hi! My name is Christopher Fong, and I am an aspiring developer in
+							Richmnond, BC, Canada.
+						</p>
+						<p>
+							This website was first built during my second year in university,
+							but is continuously developed as I learn new things.
+						</p>
+						<p>
+							I'd like to consider this page as not just my creative resume, but
+							also a place where you can get to know me further as I share my
+							thoughts and experiences more in depth.
+						</p>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 };
 
 export default MainHeader;
