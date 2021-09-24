@@ -41,10 +41,8 @@ const AboutPage = () => {
 				<div className={AboutCSS.rightcol}>
 					<h3>Goal for this website</h3>
 					<p>
-						This website will contain not only a record of what I've
-						accomplished, but also my plans and goals for the future. I hope
-						that as time passes, my story will be interesting and inspiring to
-						the wanderers of the web that stumble upon my little domain.
+						As of 2021/09/23 - Refactor website design and infrastructure,
+						implement in Next.js or another multi-page framework
 					</p>
 					<h3>Some stuff about me</h3>
 					<h4>How did I get into tech?</h4>

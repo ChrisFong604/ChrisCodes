@@ -60,8 +60,8 @@ const MainHeader = () => {
 					<div className="intro-text">
 						<h1 style={{ paddingBottom: "10vh" }}>A Brief Introduction</h1>
 						<p>
-							Hi! My name is Christopher Fong, and I am an aspiring developer in
-							Richmnond, BC, Canada.
+							Hi! My name is Christopher Fong, and I am an aspiring developer
+							born and raised in Richmond, BC, Canada.
 						</p>
 						<p>
 							This website was first built during my second year in university,
