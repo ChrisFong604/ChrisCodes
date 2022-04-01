@@ -1,21 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand&display=swap");
 
 .main-container {
-  font-family: "Montserrat", sans-serif;
-  background-color: whitesmoke;
+	font-family: "Montserrat", sans-serif;
 }
 
 .main-container h1 h2 h3 {
-  font-family: "Quicksand", sans-serif;
+	font-family: "Quicksand", sans-serif;
+}
+
+.side_by_side {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+}
+.left_side {
+	grid-column: 1;
+}
+.right_side {
+	grid-column: 2;
 }
 
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	background-color: whitesmoke;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
