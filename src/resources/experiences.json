@@ -1,16 +1,30 @@
 [
-  {
-    "organization": "SFU Surge",
-    "location": "Burnaby, BC",
-    "title": "Logistics Coordinator",
-    "flavourtext": "Working as a logistics member of the club SFU Surge, which is an all-inclusive club that connects students to the tech industry",
-    "description": "Working in a small team to organize and execute large-scale events such as hackathons, career fairs, and other various events for students interested making connections with the industry"
-  },
-  {
-    "organization": "FSS Canada",
-    "location": "Burnaby, BC",
-    "title": "Academic Tutor",
-    "flavourtext": "Taught international students of various backgrounds secondary level topics such as math, physics, and english",
-    "description": "Working in a small team to organize and execute large-scale events such as hackathons, career fairs, and other various events for students interested making connections with the industry"
-  }
+	{
+		"id": 0,
+		"organization": "BGC Engineering",
+		"location": "Vancouver, BC",
+		"title": "Web Developer Co-op",
+		"description": "Work in a scrum/agile environment to deliver feature updates and bug fixes on a safety-critical enterprise software for geo-hazard detection"
+	},
+	{
+		"id": 1,
+		"organization": "SFU Surge",
+		"location": "Burnaby, BC",
+		"title": "Director of Logistics",
+		"description": "Co-leading a team at SFU Surge, an all-inclusive technology club. Working to put together SFU Surge's flagship hackathon: Stormhacks."
+	},
+	{
+		"id": 2,
+		"organization": "SFU Surge",
+		"location": "Burnaby, BC",
+		"title": "Logistics Coordinator",
+		"description": "Participated in organizing and executing large-scale events such as hackathons, career fairs, and other various events for students interested making connections with the industry"
+	},
+	{
+		"id": 3,
+		"organization": "FSS Canada",
+		"location": "Burnaby, BC",
+		"title": "Academic Tutor",
+		"description": "Working in a small team to organize and execute large-scale events such as hackathons, career fairs, and other various events for students interested making connections with the industry"
+	}
 ]
