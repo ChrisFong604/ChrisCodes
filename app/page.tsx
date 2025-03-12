@@ -140,8 +140,8 @@ export default function Personal() {
             Just a guy who loves computers, and decided to make it his job.{" "}
             <br />
             <br />
-            Interested in designing scalable systems, and optimizion problems. I
-            also enjoy being a sysadmin at home occasionally!
+            Interested in designing scalable systems, and optimization problems.
+            I also enjoy being a sysadmin at home occasionally!
           </p>
         </div>
       </motion.section>
