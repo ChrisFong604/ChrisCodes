@@ -30,25 +30,6 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: "Motion Primitives Pro",
-    description:
-      "Advanced components and templates to craft beautiful websites.",
-    link: "https://pro.motion-primitives.com/",
-    mediaType: "video",
-    mediaUrl:
-      "https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0",
-    id: "project1",
-  },
-  {
-    name: "Motion Primitives",
-    description: "UI kit to make beautiful, animated interfaces.",
-    link: "https://motion-primitives.com/",
-    mediaType: "video",
-    mediaUrl:
-      "https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0",
-    id: "project2",
-  },
-  {
     name: "Battle To-do",
     description:
       "A functional to-do list application that additionally serves as a simple but effective multiplayer game",
@@ -57,6 +38,15 @@ export const PROJECTS: Project[] = [
     mediaUrl:
       "https://github.com/patrick-5546/battle-todo/raw/main/Screenshots/Login.png",
     id: "project3",
+  },
+  {
+    name: "Qwiki - Multiplayer Wikipedia Racer",
+    description:
+      "Race friends or join a quick queue and play with other wikipedia enthusiasts! Building in NextJS and Golang",
+    link: "https://github.com/ChrisFong604/Qwiki",
+    mediaType: "image",
+    mediaUrl: "/qwiki.png",
+    id: "pAdvanced components and templates to craft beautiful websites.Advanced components and templates to craft beautiful websites.roject1",
   },
 ];
 
