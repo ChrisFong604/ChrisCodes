@@ -30,6 +30,24 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
+    name: "Stormhacks website",
+    description:
+      "Main promotional website for Stormhacks, Simon Fraser University's largest MLH-accredited hackathon",
+    link: "https://github.com/ChrisFong604/Qwiki",
+    mediaType: "image",
+    mediaUrl: "/stormhacks.png",
+    id: "1",
+  },
+  {
+    name: "SFU Surge website",
+    description:
+      "Main promotional website for SFU Surge, An all-inclusive club designated to empower students for success in the tech industry",
+    link: "https://github.com/ChrisFong604/Qwiki",
+    mediaType: "image",
+    mediaUrl: "/sfusurge.png",
+    id: "2",
+  },
+  {
     name: "Battle To-do",
     description:
       "A functional to-do list application that additionally serves as a simple but effective multiplayer game",
@@ -37,7 +55,7 @@ export const PROJECTS: Project[] = [
     mediaType: "image",
     mediaUrl:
       "https://github.com/patrick-5546/battle-todo/raw/main/Screenshots/Login.png",
-    id: "project3",
+    id: "3",
   },
   {
     name: "Qwiki - Multiplayer Wikipedia Racer",
@@ -46,7 +64,7 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/ChrisFong604/Qwiki",
     mediaType: "image",
     mediaUrl: "/qwiki.png",
-    id: "pAdvanced components and templates to craft beautiful websites.Advanced components and templates to craft beautiful websites.roject1",
+    id: "4",
   },
 ];
 
