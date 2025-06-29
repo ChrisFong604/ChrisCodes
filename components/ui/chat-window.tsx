@@ -26,7 +26,8 @@ export default function FloatingChat() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      content: "Hello! How can I help you today?",
+      content:
+        "Curious about me, my work, or experiences? Send questions here!",
       sender: "bot",
       timestamp: new Date(),
     },
@@ -70,7 +71,7 @@ export default function FloatingChat() {
       {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50"
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50 bg-slate-100"
           size="icon"
         >
           <MessageCircle className="h-6 w-6" />
@@ -81,7 +82,7 @@ export default function FloatingChat() {
       {isOpen && (
         <Card className="fixed bottom-6 right-6 w-80 h-96 shadow-2xl z-50 flex flex-col">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-lg">Chat Support</CardTitle>
+            <CardTitle className="text-lg">Questions?</CardTitle>
             <Button
               variant="ghost"
               size="icon"
