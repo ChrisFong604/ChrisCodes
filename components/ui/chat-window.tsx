@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -16,59 +16,68 @@ import { MessageCircle, X, Send } from "lucide-react";
 import { z } from "zod";
 
 const messageSchema = z.object({
-  role: z.enum(["user", "bot"]),
+  role: z.enum(["user", "assistant"]),
   content: z.string().min(1),
 });
-interface Message {
-  id: string;
-  content: string;
-  sender: "user" | "bot";
-  timestamp: Date;
-}
+type Message = z.infer<typeof messageSchema>;
 
 export default function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: "1",
-      content:
-        "Curious about me, my work, or experiences? Send questions here!",
-      sender: "bot",
-      timestamp: new Date(),
+      role: "assistant",
+      content: "Curious about me, my work, or my experiences? Ask me anything!",
     },
   ]);
   const [inputValue, setInputValue] = useState("");
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
     if (!inputValue.trim()) return;
 
-    const newMessage: Message = {
-      id: Date.now().toString(),
+    const userMessage: Message = {
+      role: "user",
       content: inputValue,
-      sender: "user",
-      timestamp: new Date(),
     };
 
-    setMessages((prev) => [...prev, newMessage]);
+    setIsLoading(true);
+    setMessages((prev) => [...prev, userMessage]);
     setInputValue("");
 
-    // Simulate bot response
-    setTimeout(() => {
-      const botResponse: Message = {
-        id: (Date.now() + 1).toString(),
-        content: "Thanks for your message! This is a demo response.",
-        sender: "bot",
-        timestamp: new Date(),
-      };
-      setMessages((prev) => [...prev, botResponse]);
-    }, 1000);
-  };
+    try {
+      const formData = new FormData();
+      formData.append("messages", JSON.stringify([...messages, userMessage]));
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") {
-      handleSendMessage();
+      if (!res.ok) {
+        throw new Error(data.error || "Unknown error");
+      }
+
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: data.response },
+      ]);
+    } catch (err: any) {
+      console.error("Error sending message:", err);
+    } finally {
+      setIsLoading(false);
     }
   };
+
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   return (
     <>
@@ -99,14 +108,14 @@ export default function FloatingChat() {
           </CardHeader>
 
           <CardContent className="flex-1 overflow-y-auto space-y-4 p-4">
-            {messages.map((message) => (
+            {messages.map((message, id) => (
               <div
-                key={message.id}
-                className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
+                key={id}
+                className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
                   className={`max-w-[80%] rounded-lg px-3 py-2 text-sm ${
-                    message.sender === "user"
+                    message.role === "user"
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted text-muted-foreground"
                   }`}
@@ -115,21 +124,24 @@ export default function FloatingChat() {
                 </div>
               </div>
             ))}
+            <div ref={messagesEndRef} />
           </CardContent>
 
           <CardFooter className="p-4 pt-0">
-            <div className="flex w-full space-x-2">
+            <form
+              className="flex w-full space-x-2"
+              onSubmit={handleSendMessage}
+            >
               <Input
                 placeholder="Type your message..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={handleKeyPress}
                 className="flex-1"
               />
-              <Button onClick={handleSendMessage} size="icon">
+              <Button type="submit" size="icon">
                 <Send className="h-4 w-4" />
               </Button>
-            </div>
+            </form>
           </CardFooter>
         </Card>
       )}

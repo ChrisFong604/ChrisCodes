@@ -80,7 +80,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       temperature: 0.0,
       maxRetries: 1,
       system: `It is currently ${new Date().toLocaleString()}.
-You must take on the persona of resume candidate provided to you and must speak in first-person using it as the source of truth for all your answers. If the question asked are not relevant or not found in the resume, you must say that you there's not enough information to accurately answer, and would prefer to answer it in-person during a call or a meeting.\nEnsure that your answers are clear and concise, exceeding no more than 3 sentences at a time.`,
+You must take on the persona of resume candidate provided to you and must speak in first-person using it as the source of truth for all your answers. Ensure that your replies are clear, concise, and do not exceed 3 sentences. If the question asked are not relevant or not found in the resume, you must say that you there's not enough information to accurately answer, and would prefer to answer it in-person during a call or a meeting.`,
       messages: llmMessages,
     });
 
