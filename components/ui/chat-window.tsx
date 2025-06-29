@@ -13,7 +13,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { MessageCircle, X, Send } from "lucide-react";
+import { z } from "zod";
 
+const messageSchema = z.object({
+  role: z.enum(["user", "bot"]),
+  content: z.string().min(1),
+});
 interface Message {
   id: string;
   content: string;
