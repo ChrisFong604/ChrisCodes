@@ -30,13 +30,31 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
+    name: "Backseat Drivers",
+    description:
+      "Backseat Drivers is a carpool app that revolves around communities. Save money, time, and the environment by coordinating carpool rides with trusted members within your community! Built using Kotlin and Firebase",
+    link: "https://github.com/ChrisFong604/BackseatDriversAndroid",
+    mediaType: "image",
+    mediaUrl: "/backseatdriver.png",
+    id: "1",
+  },
+  {
     name: "Stormhacks website",
     description:
       "Main promotional website for Stormhacks, Simon Fraser University's largest MLH-accredited hackathon",
     link: "https://github.com/ChrisFong604/Qwiki",
     mediaType: "image",
     mediaUrl: "/stormhacks.png",
-    id: "1",
+    id: "2",
+  },
+  {
+    name: "Qwiki - Multiplayer Wikipedia Racer",
+    description:
+      "Race friends or join a quick queue and play with other wikipedia enthusiasts! Building in NextJS and Golang",
+    link: "https://github.com/ChrisFong604/Qwiki",
+    mediaType: "image",
+    mediaUrl: "/qwiki.png",
+    id: "3",
   },
   {
     name: "SFU Surge website",
@@ -45,7 +63,7 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/ChrisFong604/Qwiki",
     mediaType: "image",
     mediaUrl: "/sfusurge.png",
-    id: "2",
+    id: "4",
   },
   {
     name: "Battle To-do",
@@ -55,16 +73,7 @@ export const PROJECTS: Project[] = [
     mediaType: "image",
     mediaUrl:
       "https://github.com/patrick-5546/battle-todo/raw/main/Screenshots/Login.png",
-    id: "3",
-  },
-  {
-    name: "Qwiki - Multiplayer Wikipedia Racer",
-    description:
-      "Race friends or join a quick queue and play with other wikipedia enthusiasts! Building in NextJS and Golang",
-    link: "https://github.com/ChrisFong604/Qwiki",
-    mediaType: "image",
-    mediaUrl: "/qwiki.png",
-    id: "4",
+    id: "5",
   },
 ];
 
